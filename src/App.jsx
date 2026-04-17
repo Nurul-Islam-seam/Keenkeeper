@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import FriendDetail from './pages/FriendDetail'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import Stats from './pages/Stats'
 import Timeline from './pages/Timeline'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
+          <Route path="/stats" element={<Stats />} />
           <Route path="/friend/:id" element={<FriendDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
