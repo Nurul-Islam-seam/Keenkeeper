@@ -1,0 +1,98 @@
+[
+	{
+		"id": 1,
+		"name": "Ariana Flores",
+		"avatar": "https://i.pravatar.cc/150?img=1",
+		"email": "ariana.flores@gmail.com",
+		"daysSinceContact": 23,
+		"status": "overdue",
+		"tags": ["college", "travel"],
+		"bio": "Met in university debate club. We usually catch up before long holidays.",
+		"goal": 14,
+		"nextDueDate": "2026-04-05"
+	},
+	{
+		"id": 2,
+		"name": "Noah Bennett",
+		"avatar": "https://i.pravatar.cc/150?img=2",
+		"email": "noah.bennett@outlook.com",
+		"daysSinceContact": 11,
+		"status": "on-track",
+		"tags": ["work", "mentor"],
+		"bio": "Former team lead who now runs a small design studio in Austin.",
+		"goal": 21,
+		"nextDueDate": "2026-04-27"
+	},
+	{
+		"id": 3,
+		"name": "Rina Sato",
+		"avatar": "https://i.pravatar.cc/150?img=3",
+		"email": "rina.sato@yahoo.com",
+		"daysSinceContact": 18,
+		"status": "almost due",
+		"tags": ["book club", "close friend"],
+		"bio": "Monthly book-club partner who sends recommendations every weekend.",
+		"goal": 21,
+		"nextDueDate": "2026-04-18"
+	},
+	{
+		"id": 4,
+		"name": "Marcus Hill",
+		"avatar": "https://i.pravatar.cc/150?img=4",
+		"email": "marcus.hill@proton.me",
+		"daysSinceContact": 30,
+		"status": "overdue",
+		"tags": ["gym", "neighbor"],
+		"bio": "Neighbor and morning workout partner. We train together on Saturdays.",
+		"goal": 14,
+		"nextDueDate": "2026-03-29"
+	},
+	{
+		"id": 5,
+		"name": "Leila Hassan",
+		"avatar": "https://i.pravatar.cc/150?img=5",
+		"email": "leila.hassan@mail.com",
+		"daysSinceContact": 7,
+		"status": "on-track",
+		"tags": ["startup", "networking"],
+		"bio": "Met at a startup meetup and now exchange product feedback each month.",
+		"goal": 14,
+		"nextDueDate": "2026-04-23"
+	},
+	{
+		"id": 6,
+		"name": "Daniel Park",
+		"avatar": "https://i.pravatar.cc/150?img=6",
+		"email": "daniel.park@icloud.com",
+		"daysSinceContact": 26,
+		"status": "overdue",
+		"tags": ["gaming", "high school"],
+		"bio": "High school friend who moved to Seoul. We usually plan game nights online.",
+		"goal": 14,
+		"nextDueDate": "2026-04-02"
+	},
+	{
+		"id": 7,
+		"name": "Priya Nair",
+		"avatar": "https://i.pravatar.cc/150?img=7",
+		"email": "priya.nair@gmail.com",
+		"daysSinceContact": 19,
+		"status": "almost due",
+		"tags": ["volunteer", "community"],
+		"bio": "We volunteer at local food drives and coordinate events once a month.",
+		"goal": 21,
+		"nextDueDate": "2026-04-19"
+	},
+	{
+		"id": 8,
+		"name": "Ethan Brooks",
+		"avatar": "https://i.pravatar.cc/150?img=8",
+		"email": "ethan.brooks@me.com",
+		"daysSinceContact": 9,
+		"status": "on-track",
+		"tags": ["photography", "travel"],
+		"bio": "Travel companion and weekend photographer. We share edits after every trip.",
+		"goal": 21,
+		"nextDueDate": "2026-04-29"
+	}
+]
