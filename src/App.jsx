@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import FriendDetail from './pages/FriendDetail'
@@ -18,6 +18,7 @@ function App() {
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/friend/:id" element={<FriendDetail />} />
+          <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -10,12 +10,20 @@ function NotFound() {
       <p className="mt-3 text-sm text-slate-600 sm:text-base">
         The page you are looking for does not exist or may have been moved.
       </p>
-      <Link
-        to="/"
-        className="mt-6 inline-flex rounded-full bg-[#244D3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1D3F33]"
-      >
-        Back to Home
-      </Link>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <Link
+          to="/"
+          className="inline-flex rounded-full bg-[#244D3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1D3F33]"
+        >
+          Back to Home
+        </Link>
+        <Link
+          to="/timeline"
+          className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+        >
+          Go to Timeline
+        </Link>
+      </div>
     </section>
   )
 }

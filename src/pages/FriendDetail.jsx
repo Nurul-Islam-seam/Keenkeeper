@@ -6,7 +6,7 @@ import {
   Trash2,
 } from 'lucide-react'
 import toast from 'react-hot-toast'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import callIcon from '../assets/call.png'
 import textIcon from '../assets/text.png'
 import videoIcon from '../assets/video.png'
@@ -35,6 +35,12 @@ function FriendDetail() {
         <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center">
           <h1 className="text-2xl font-semibold text-slate-900">Friend not found</h1>
           <p className="mt-2 text-slate-600">This profile does not exist in your current list.</p>
+          <Link
+            to="/"
+            className="mt-5 inline-flex rounded-full bg-[#244D3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1D3F33]"
+          >
+            Return to Home
+          </Link>
         </div>
       </section>
     )
