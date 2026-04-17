@@ -1,7 +1,12 @@
+import facebookIcon from '../assets/facebook.png'
+import instagramIcon from '../assets/instagram.png'
+import logoXL from '../assets/logo-xl.png'
+import twitterIcon from '../assets/twitter.png'
+
 const socialLinks = [
-  { id: 'youtube', href: '#', label: '▶' },
-  { id: 'facebook', href: '#', label: 'f' },
-  { id: 'x', href: '#', label: 'x' },
+  { id: 'facebook', href: '#', icon: facebookIcon },
+  { id: 'instagram', href: '#', icon: instagramIcon },
+  { id: 'twitter', href: '#', icon: twitterIcon },
 ]
 
 function Footer() {
@@ -9,7 +14,7 @@ function Footer() {
     <footer className="mt-12 bg-[#1F5A49] text-white">
       <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-5xl font-bold tracking-tight sm:text-6xl">KeenKeeper</h2>
+          <img src={logoXL} alt="KeenKeeper" className="h-16 w-auto sm:h-20" />
           <p className="mt-4 max-w-2xl text-sm text-white/70 sm:text-base">
             Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
           </p>
@@ -21,9 +26,9 @@ function Footer() {
                 key={item.id}
                 href={item.href}
                 aria-label={item.id}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-bold text-slate-900 transition hover:bg-slate-200"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-sm font-bold text-slate-900 transition hover:scale-105 hover:bg-white"
               >
-                {item.label}
+                <img src={item.icon} alt={item.id} className="h-4 w-4" />
               </a>
             ))}
           </div>

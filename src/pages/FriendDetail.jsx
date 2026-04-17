@@ -2,14 +2,14 @@ import {
   AlarmClockPlus,
   Archive,
   Mail,
-  MessageSquareText,
   Pencil,
-  PhoneCall,
   Trash2,
-  Video,
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { useParams } from 'react-router-dom'
+import callIcon from '../assets/call.png'
+import textIcon from '../assets/text.png'
+import videoIcon from '../assets/video.png'
 import { useTimeline } from '../context/TimelineContext'
 import friends from '../data/friends.json'
 
@@ -144,7 +144,7 @@ function FriendDetail() {
                 onClick={() => handleCheckIn('call')}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#244D3F] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#1D3F33]"
               >
-                <PhoneCall className="h-4 w-4" />
+                <img src={callIcon} alt="Call" className="h-4 w-4" />
                 Call
               </button>
               <button
@@ -152,7 +152,7 @@ function FriendDetail() {
                 onClick={() => handleCheckIn('text')}
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
               >
-                <MessageSquareText className="h-4 w-4" />
+                <img src={textIcon} alt="Text" className="h-4 w-4" />
                 Text
               </button>
               <button
@@ -160,7 +160,7 @@ function FriendDetail() {
                 onClick={() => handleCheckIn('video')}
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
               >
-                <Video className="h-4 w-4" />
+                <img src={videoIcon} alt="Video" className="h-4 w-4" />
                 Video
               </button>
             </div>
