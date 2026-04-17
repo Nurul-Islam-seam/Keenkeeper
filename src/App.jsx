@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import FriendDetail from './pages/FriendDetail'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import FriendPreview from './pages/FriendPreview'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <main className="min-h-[calc(100vh-220px)]">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/friend/:id" element={<FriendPreview />} />
+          <Route path="/friend/:id" element={<FriendDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
