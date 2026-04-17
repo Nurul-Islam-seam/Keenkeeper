@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 const TimelineContext = createContext(undefined)
 
@@ -23,12 +23,34 @@ const initialEntries = [
   },
 ]
 
+const STORAGE_KEY = 'keenkeeper.timeline.entries'
+
+function loadEntries() {
+  if (typeof window === 'undefined') {
+    return initialEntries
+  }
+
+  try {
+    const storedEntries = window.localStorage.getItem(STORAGE_KEY)
+    if (!storedEntries) {
+      return initialEntries
+    }
+
+    const parsedEntries = JSON.parse(storedEntries)
+    return Array.isArray(parsedEntries) && parsedEntries.length > 0
+      ? parsedEntries
+      : initialEntries
+  } catch {
+    return initialEntries
+  }
+}
+
 function capitalize(value) {
   return value.charAt(0).toUpperCase() + value.slice(1)
 }
 
 export function TimelineProvider({ children }) {
-  const [entries, setEntries] = useState(initialEntries)
+  const [entries, setEntries] = useState(loadEntries)
 
   const addEntry = (type, friendName) => {
     const entry = {
@@ -41,6 +63,33 @@ export function TimelineProvider({ children }) {
     setEntries((prevEntries) => [entry, ...prevEntries])
     return entry
   }
+
+  useEffect(() => {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(entries))
+  }, [entries])
+
+  useEffect(() => {
+    const handleStorageUpdate = (event) => {
+      if (event.key !== STORAGE_KEY || !event.newValue) {
+        return
+      }
+
+      try {
+        const parsedEntries = JSON.parse(event.newValue)
+        if (Array.isArray(parsedEntries)) {
+          setEntries(parsedEntries)
+        }
+      } catch {
+        // Ignore malformed storage updates.
+      }
+    }
+
+    window.addEventListener('storage', handleStorageUpdate)
+
+    return () => {
+      window.removeEventListener('storage', handleStorageUpdate)
+    }
+  }, [])
 
   const value = useMemo(
     () => ({
